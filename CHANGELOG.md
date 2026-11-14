@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.1] - 2026-11-14
+
+### Changed — packaging
+- Published to PyPI. PyPI refuses the 0.2.0 filenames (a file with that name was uploaded and deleted
+  there before), so this release carries the same analyzer as 0.2.0 under a new version. No code
+  changes.
+- `release.yml` uploads each release's files to PyPI with trusted publishing (#18).
+
 ## [0.2.0] - 2026-10-31
 
 ### Changed — packaging
@@ -79,5 +87,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   score) for every signal.
 
 [Unreleased]: https://github.com/mlaify/attackmap-analyzer-terraform/compare/v0.2.0...HEAD
+[0.2.1]: https://github.com/mlaify/attackmap-analyzer-terraform/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/mlaify/attackmap-analyzer-terraform/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/mlaify/attackmap-analyzer-terraform/releases/tag/v0.1.0
