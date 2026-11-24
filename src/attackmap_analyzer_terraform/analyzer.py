@@ -1032,6 +1032,14 @@ class TerraformAnalyzer:
         enabled_by_default=True,
     )
 
+    # SDK v2 (AC-403): explicitly declare the extraction protocol this
+    # analyzer targets. Core resolves the declaration via
+    # attackmap.sdk.analyzer_contracts.declared_extraction_protocol, where an
+    # explicit attribute wins over the SDK default. Plugins still on
+    # protocol 1.0 keep loading indefinitely via core's v1 -> v2 adapter
+    # (attackmap.extraction.adapters).
+    EXTRACTION_PROTOCOL_VERSION = "2.0"
+
     @property
     def name(self) -> str:
         return self.metadata.name
